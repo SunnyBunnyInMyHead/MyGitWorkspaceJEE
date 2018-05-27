@@ -11,7 +11,7 @@ public class ButtonPanel extends JPanel {
 	
 	public ButtonPanel() {
 		super();
-		button = new JButton("clculate & repaint");
+		button = new JButton("calculate & repaint");
 		this.add(button);
 	}
 	

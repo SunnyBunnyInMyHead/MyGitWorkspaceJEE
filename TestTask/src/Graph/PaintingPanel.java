@@ -147,16 +147,16 @@ public class PaintingPanel extends JPanel {
 		Point textOffset = new Point(-2, horzNotch.height + 12);
 
 		// horizontal nothces
-		for (int i = 1; i <= 6; i++) {
-			System.out.println();
-			g.drawLine((workingRectangle.x + ortRectangle.width) * i + horzNotch.x+workingRectangle.x, 
-					(workingRectangle.y + horzNotch.y),
-					(workingRectangle.x + ortRectangle.width) * i + horzNotch.width+workingRectangle.x,
-					(workingRectangle.y + horzNotch.height));
+				for (int i = 1; i <= 6; i++) {
+					System.out.println();
+					g.drawLine((workingRectangle.x + ortRectangle.width * i) + horzNotch.x, (workingRectangle.y + horzNotch.y),
+							(workingRectangle.x + ortRectangle.width * i) + horzNotch.width,
+							(workingRectangle.y + horzNotch.height));
 
-			g.drawString(Integer.toString(i), (workingRectangle.x + ortRectangle.width) * i + textOffset.x+workingRectangle.x,
-					workingRectangle.y + textOffset.y);
-		}
+					g.drawString(Integer.toString(i), (workingRectangle.x + ortRectangle.width * i) + textOffset.x,
+							workingRectangle.y + textOffset.y);
+				}
+
 
 		// vertical nothces
 		g.drawString("10", workingRectangle.x - 20, workingRectangle.y - ortRectangle.height * 10);

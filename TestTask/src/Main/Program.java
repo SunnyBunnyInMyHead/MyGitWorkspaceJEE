@@ -23,7 +23,7 @@ public class Program extends Thread {
 	private ArraysCalculation arrCalculation;
 
 	public Program() {
-		frame = new JFrame("Moving and Scaling");
+		frame = new JFrame("Graphics");
 		paintPanel = new PaintingPanel(new GridLayout());
 		buttonPanel = new ButtonPanel();
 		arrCalculation = new ArraysCalculation(0, 6, 120);
