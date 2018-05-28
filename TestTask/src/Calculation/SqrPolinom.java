@@ -1,9 +1,9 @@
 package Calculation;
 
 public class SqrPolinom {
-	private int K = 3, pts = 5; //  -степень полинома,
+	private final int K = 3, pts = 5; //  -степень полинома,
 	// pts-количество точек
-	private int N = 5;// длинна массивов
+	private final int N = 5;// длинна массивов
 	private double x[], y[], b[], sums[][];
 	private double a[];
 
@@ -69,7 +69,9 @@ public class SqrPolinom {
 			b[i] = 0;
 			for (int k = 0; k < pts; k++)
 				b[i] += Power(x[k], i) * y[k];
+			System.out.println(b[i]);
 		}
+		
 	}
 
 	private void gausMethod() {
@@ -97,12 +99,12 @@ public class SqrPolinom {
 		}
 	}
 
+
+
 	private void refreshMass() {
-		for (int i = 0; i < K; i++) {
-			a[i] = b[i] = 0;
-			for (int j = 0; j < K; j++)
-				sums[i][j] = 0;
-		}
+		a = new double[N];
+		b = new double[N];
+		sums = new double[N][N];
 	}
 
 	public double getMeaning(double x) {

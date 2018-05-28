@@ -13,7 +13,6 @@ public class Lagranj {
 				if (i != j) {
 
 					mul *= (x - xv[j]) / (xv[i] - xv[j]);
-
 				}
 			}
 			sum += yv[i] * mul;

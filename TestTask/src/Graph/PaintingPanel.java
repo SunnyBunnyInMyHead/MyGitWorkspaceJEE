@@ -32,14 +32,6 @@ public class PaintingPanel extends JPanel {
 			(workingRectangle.width - workingRectangle.x) / 7,
 			-(workingRectangle.height - workingRectangle.y - 70) / 14);
 
-	public PaintingPanel() {
-		for (int i = 0; i < rectangles.length; i++) {
-			rectangles[i] = generateRectangle(((i + 1) * 20), 40);
-		}
-		mouseMoveAdapt = new MouseMovingAdapter(rectangles, this);
-		addMouseMotionListener(mouseMoveAdapt);
-		addMouseListener(mouseMoveAdapt);
-	}
 
 	public PaintingPanel(GridLayout gridLayout) {
 		super(gridLayout);
@@ -192,12 +184,11 @@ public class PaintingPanel extends JPanel {
 	public void paintGraphics(Graphics2D g) {
 		if (graphX != null && sqrGraphY != null && lagrGraphY != null) {
 
-			System.out.println();
 			g.setColor(Color.RED);
-			g.drawPolyline(graphX, lagrGraphY, graphX.length);
+			g.drawPolyline(graphX,sqrGraphY , graphX.length);
 
 			g.setColor(Color.ORANGE);
-			g.drawPolyline(graphX, sqrGraphY, graphX.length);
+			g.drawPolyline(graphX, lagrGraphY, graphX.length);
 		}
 	}
 
