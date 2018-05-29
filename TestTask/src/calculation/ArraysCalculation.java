@@ -1,4 +1,4 @@
-package Calculation;
+package calculation;
 
 public class ArraysCalculation {
 	private Lagranj lj = new Lagranj();

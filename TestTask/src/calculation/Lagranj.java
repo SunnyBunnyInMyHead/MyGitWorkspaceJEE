@@ -1,4 +1,4 @@
-package Calculation;
+package calculation;
 
 public class Lagranj {
 	private double sum = 0;

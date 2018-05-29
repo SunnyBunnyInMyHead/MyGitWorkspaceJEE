@@ -1,4 +1,4 @@
-package Calculation;
+package calculation;
 
 import java.io.Serializable;
 

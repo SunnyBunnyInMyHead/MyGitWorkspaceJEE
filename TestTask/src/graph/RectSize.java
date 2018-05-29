@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 public class RectSize {
 	private int height;

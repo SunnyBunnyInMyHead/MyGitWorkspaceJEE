@@ -1,9 +1,9 @@
-package Calculation;
+package calculation;
 
 public class SqrPolinom {
-	private final int K = 3, pts = 5; // К-степень полинома,
-	// pts-количество точек
-	private final int N = 5;// длинна массивов
+	private final int K = 3, pts = 5; // К-polinom degree,
+	// pts-the number of points
+	private final int N = 5;// arrays length
 	private double x[], y[], b[], sums[][];
 	private double a[];
 
@@ -16,10 +16,8 @@ public class SqrPolinom {
 	}
 
 	public SqrPolinom(double x[], double y[]) {
-		a = new double[N];
-		b = new double[N];
+		refreshMass();
 		setXYmasMeanings(x, y);
-		sums = new double[N][N];
 	}
 
 	public void setXYmasMeanings(double x[], double y[]) {
@@ -64,19 +62,17 @@ public class SqrPolinom {
 	}
 
 	private void feelingTheKoefColumnOfFreeElem() {
-		// заполняем столбец свободных членов
+		// feel in the column of free members 
 		for (int i = 0; i < K + 1; i++) {
 			b[i] = 0;
 			for (int k = 0; k < pts; k++)
 				b[i] += Power(x[k], i) * y[k];
-			System.out.println(b[i]);
 		}
 		
 	}
 
 	private void gausMethod() {
-		// применяем метод Гаусса для приведения матрицы системы к треугольному
-		// виду
+		// apply the Gauss method to reduce the matrix of the system to a triangular form
 		double M;
 		for (int k = 0; k < K + 1; k++) {
 			for (int i = k + 1; i < K + 1; i++) {
@@ -89,7 +85,7 @@ public class SqrPolinom {
 	}
 
 	private void calcKoefAproxPolinom() {
-		// вычисляем коэффициенты аппроксимирующего полинома
+		// calculate the coefficient approximation polynom
 		double s;
 		for (int i = K; i >= 0; i--) {
 			s = 0;
@@ -98,8 +94,6 @@ public class SqrPolinom {
 			a[i] = (b[i] - s) / sums[i][i];
 		}
 	}
-
-
 
 	private void refreshMass() {
 		a = new double[N];

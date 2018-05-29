@@ -1,4 +1,4 @@
-package Main;
+package main_part;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -10,10 +10,10 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
-import Calculation.ArraysCalculation;
-import Calculation.Point2D;
-import Graph.ButtonPanel;
-import Graph.PaintingPanel;
+import calculation.ArraysCalculation;
+import calculation.Point2D;
+import graph.ButtonPanel;
+import graph.PaintingPanel;
 
 public class Program extends Thread {
 	public static final Dimension dimension = new Dimension(700, 500);

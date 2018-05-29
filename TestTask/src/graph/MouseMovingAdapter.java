@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -6,8 +6,8 @@ import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
 
-import Main.MainClass;
-import Main.Program;
+import main_part.MainClass;
+import main_part.Program;
 
 class MouseMovingAdapter extends MouseAdapter {
 

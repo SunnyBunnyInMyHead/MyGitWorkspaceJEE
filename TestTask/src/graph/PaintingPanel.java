@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -16,9 +16,9 @@ import java.util.Comparator;
 
 import javax.swing.JPanel;
 
-import Calculation.Point2D;
-import Main.MainClass;
-import Main.Program;
+import calculation.Point2D;
+import main_part.MainClass;
+import main_part.Program;
 
 public class PaintingPanel extends JPanel {
 
